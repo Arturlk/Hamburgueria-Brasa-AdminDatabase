@@ -5,6 +5,7 @@ import re
 from sqlalchemy import create_engine, text
 from urllib.parse import quote_plus
 
+
 SERVIDOR = r"brasa-artur.database.windows.net"
 BANCO = "HamburgueriaBrasa"
 DRIVER = "ODBC Driver 18 for SQL Server"
