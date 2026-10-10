@@ -37,7 +37,10 @@ ORDER BY Preco DESC;
 # Q3. Pedidos por status
 # Colunas do resultado: Status, QuantidadePedidos
 Q3 = """
-
+SELECT status, count( DataPedido)
+FROM [HamburgueriaBrasa].[dbo].[Pedidos]
+where DataPedido >= '2026-03-01' and status in ('Entregue', 'Cancelado' )
+group by Status;
 """
 
 # Q4. Nota média e pedidos sem avaliação

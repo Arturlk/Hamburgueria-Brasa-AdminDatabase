@@ -1,3 +1,5 @@
+import streamlit as st
+
 def texto_do_eixo(tabela, coluna, moeda):
     tabela = tabela.copy()
 
