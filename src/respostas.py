@@ -64,7 +64,7 @@ Q5 = """
         TipoEntrega
     FROM [HamburgueriaBrasa].[dbo].[Pedidos]
     GROUP BY DATENAME(MONTH, DataPedido), TipoEntrega
-    order by mes
+    order by mes ASC
 """
 
 # ---------------------------------------------------------------------
@@ -204,7 +204,7 @@ WHERE p.Status = 'Entregue' and p.DataPedido >= '2026-03-01' and p.DataPedido <=
 GROUP BY DATENAME(MONTH, p.DataPedido), p.IdPedido, c.Nome
 ORDER BY  Faturamento desc;
 """
-
+#####atualizar
 # Q16. Clientes sem nenhum pedido
 # Colunas do resultado: Nome, Bairro, DataCadastro
 Q16 = """
