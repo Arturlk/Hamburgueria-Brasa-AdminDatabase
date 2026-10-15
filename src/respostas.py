@@ -59,12 +59,12 @@ WHERE Status = 'Entregue';
 # Colunas do resultado: Mes, TipoEntrega, QuantidadePedidos
 Q5 = """
     SELECT 
-        DATENAME(MONTH, DataPedido) AS Mes,
+        DATENAME(MONTH, DataPedido) AS mes,
         CONVERT(INT, COUNT(IdPedido)) AS QuantidadePedidos,
         TipoEntrega
     FROM [HamburgueriaBrasa].[dbo].[Pedidos]
     GROUP BY DATENAME(MONTH, DataPedido), TipoEntrega
-    order by Mes ASC
+    order by mes ASC
 """
 #----
 # ---------------------------------------------------------------------
